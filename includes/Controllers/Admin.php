@@ -11,7 +11,6 @@ class Admin implements Controller {
 		$result = $router->resolve(
 			$rest,
 			[
-				['/minimum-balance(\?.*)?$', Router::lazyLoad($ns . 'MinimumBalance')],
 				['/saved$', Router::lazyLoad($ns . 'Saved')],
 				['/email(\?.*)?$', Router::lazyLoad($ns . 'Email')],
 				['/setup$', Router::lazyLoad($ns . 'Setup')],

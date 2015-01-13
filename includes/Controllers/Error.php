@@ -11,7 +11,7 @@ class Error implements Controller {
 			'ticket' => intval($matches['ticket']),
 		];
 		if (!empty($get['insufficient'])) {
-			$symbols['nothanks'] = '/admin/minimum-balance';
+			$symbols['nothanks'] = '/start?insufficient=1';
 		}
 		$tmpl = new Template('error');
 		$tmpl->render($symbols);

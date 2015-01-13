@@ -24,7 +24,7 @@ $(function () {
 						message = _('Email address stored.');
 						url = '/start';
 						if (/\?insufficient\=1/.test(window.location.href)) {
-							url = '/admin/minimum-balance';
+							url = '/start?insufficient=1';
 							debugger;
 						}
 					}

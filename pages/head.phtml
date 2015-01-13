@@ -35,7 +35,11 @@ if (!isset($errorClass)) {
 </head>
 <body>
 	<div id="errorPage" class="<?= $errorClass ?>">
-		<div class="network">
+        <div class="lowBalance hidden">
+            <h1><?= $i18n->_('Insufficient funds, please contact the operator.') ?></h1>
+            <p><?= $i18n->_('If the problem persists, please contact the operator.') ?></p>
+        </div>
+		<div class="network hidden">
 			<h1><?= $i18n->_('Network Unreachable') ?>:</h1>
 			<p><?= $i18n->_('If the problem persists, please contact the operator.') ?></p>
 		</div>

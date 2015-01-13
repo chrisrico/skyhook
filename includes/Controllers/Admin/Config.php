@@ -36,8 +36,6 @@ class Config implements Controller {
 		} else {
 			if ($post['alt'] === 'email') {
 				header('Location: /admin/email?error=1');
-			} else {
-				header('Location: /admin/minimum-balance?error=1');
 			}
 		}
 		return false;

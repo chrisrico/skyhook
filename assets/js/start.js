@@ -3,6 +3,23 @@ Comet.open('/price', function (price) {
 });
 
 $(function () {
+    var contactInfo = $('#errorContact');
+    var hideContact = $.trim(contactInfo.text()) === '';
+    var errorPage = $('#errorPage');
+    var lowBalance = $('.lowBalance')
+
+    function showError() {
+        contactInfo.toggleClass('hidden', hideContact);
+        errorPage.removeClass('hidden').show();
+        lowBalance.removeClass('hidden').show();
+    }
+
+    if (location.search.indexOf("insufficient=1") >= 0) {
+        showError();
+    }
+});
+
+$(function () {
 	MBP.hideUrlBarOnLoad();
 	
 	function goToAccountPage() {

@@ -121,7 +121,7 @@ $result = $router->resolve(
 		//Checks the known connectivity before any other routes are resolved.
 		['', Container::dispense('Controllers\ConnectivityChecker')],
 		
-		['/start$', Router::lazyLoad('Controllers\Start')],
+		['/start(\?.*)?$', Router::lazyLoad('Controllers\Start')],
 		['/account$', Router::lazyLoad('Controllers\Account')],
 		['/purchase/:address$', Router::lazyLoad('Controllers\StartPurchase')],
 		['/bust$', Router::lazyLoad('Controllers\CacheBust')],

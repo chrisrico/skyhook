@@ -184,7 +184,7 @@ $(function () {
 	Comet.open('/billscan-balance/' + ticketId, function (data) {
 		Loading.hide();
 		if (data.diff === 0 && data.bills === "0.00") {
-			window.location.replace('/admin/minimum-balance');
+			window.location.replace('/start?insufficient=1');
 			return;
 		}
 		if (handlers[data.event]) {

@@ -9,12 +9,14 @@
 		var contactInfo = $('#errorContact');
 		var hideContact = $.trim(contactInfo.text()) === '';
 		var errorPage = $('#errorPage');
+        var network = $('.network');
 		var shown = false;
 		
 		function showError() {
 			isConnected = false;
 			contactInfo.toggleClass('hidden', hideContact);
 			errorPage.removeClass('hidden').show();
+            network.removeClass('hidden').show();
 			shown = true;
 		}
 		
